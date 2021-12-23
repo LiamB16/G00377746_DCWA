@@ -1,0 +1,30 @@
+<style>
+    table,
+    tb,
+    td {
+        border: 1px solid black;
+    }
+</style>
+<h3>Students</h3>
+<form action="/addstudents">
+<button>add student</button>
+</form>
+
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>GPA</th>
+    </tr>
+
+    <% students.forEach((student)=> { %>
+        <tr>
+            <td><%= student.sid %> </td>
+            <td><%= student.name %> </td>
+            <td><%= student.gpa %> </td>
+            <td><a href="/delete/<%= student.sid %>" >Delete</a></td>
+        </tr>
+        <% }) %>
+
+</table>
+<td><a href="/">home</a></td>

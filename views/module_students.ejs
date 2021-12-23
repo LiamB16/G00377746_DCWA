@@ -1,0 +1,27 @@
+<style>
+    table,
+    tb,
+    td {
+        border: 1px solid black;
+    }
+</style>
+<h3>List Of Students</h3>
+
+
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>GPA</th>
+    </tr>
+
+    <% Mod_students.forEach((Mod_student)=> { %>
+        <tr>
+            <td><%= Mod_student.sid %> </td>
+            <td><%= Mod_student.name %> </td>
+            <td><%= Mod_student.gpa %> </td>
+        </tr>
+        <% }) %>
+
+</table>
+<td><a href="/">home</a></td>

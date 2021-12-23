@@ -1,0 +1,25 @@
+<style>
+    table, tb, td {
+        border: 1px solid black;
+    }
+</style>
+<h3>Lecturers</h3>
+<form action="/addlecturer">
+<button>add lecturer</button>
+<table>
+    <tr>
+    <th>LecturerID</th>
+    <th>Name</th>
+    <th>Dept</th>
+    </tr>
+    <% lecturers.forEach(lecturer) =>
+    { %>
+    <tr>
+    <td><%= lecturer.Lid %></td>
+    <td><%= lecturer.name %></td>
+    <td><%= lecturer.dept %></td>
+    </tr>
+    <% }) %>
+    </table>
+
+    <td><a href="/">home</a></td>
